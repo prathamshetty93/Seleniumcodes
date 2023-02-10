@@ -19,6 +19,16 @@ public class Main {
 
     }
 
+
+    public void checkObject(){
+        if(driver.findElements(By.xpath("//div[@class='fsw_inputBox searchToCity inactiveWidget ']")).size()!=0) {
+            System.out.println("Element is present");
+        }
+        else {
+            System.out.println("Element not present");
+        }
+    }
+
     public void screenshots() throws IOException {
         //taking screenshots
         TakesScreenshot ts=(TakesScreenshot)driver;
@@ -49,6 +59,7 @@ public class Main {
         obj1.test();
         obj1.screenshots();
         obj1.elementSs();
+        obj1.checkObject();
 
     }
 }
